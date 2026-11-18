@@ -12,7 +12,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
@@ -25,6 +24,7 @@
     <li><a href="#services">Υπηρεσίες</a></li>
     <li><a href="#why">Γιατί Εμάς</a></li>
     <li><a href="#how">Πώς Λειτουργεί</a></li>
+    <li><a href="#facilities">Εγκαταστάσεις</a></li>
     <li><a href="#contact">Επικοινωνία</a></li>
   </ul>
   <a href="tel:+306976787977" class="hcall">
@@ -39,6 +39,7 @@
   <a href="#services" onclick="this.closest('.mob').classList.remove('open')">Υπηρεσίες</a>
   <a href="#why" onclick="this.closest('.mob').classList.remove('open')">Γιατί Εμάς</a>
   <a href="#how" onclick="this.closest('.mob').classList.remove('open')">Πώς Λειτουργεί</a>
+  <a href="#facilities" onclick="this.closest('.mob').classList.remove('open')">Εγκαταστάσεις</a>
   <a href="#contact" onclick="this.closest('.mob').classList.remove('open')">Επικοινωνία</a>
 </nav>
 
@@ -69,7 +70,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-right-bg"></div>
-    <div class="hero-logo-showcase rv2" aria-hidden="true">
+    <div class="hero-logo-showcase rv2">
       <img src="assets/logo-full-white.png" alt="ΠΝ Service Κτιρίων - Παπαθανασίου Νικόλαος">
     </div>
   </div>
@@ -115,7 +116,7 @@
         <div class="svc-num">02</div>
         <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
         <h3>Απεντόμωση &amp;<br>Μυοκτονία</h3>
-        <p>Ασφαλής και αποτελεσματική απαλλαγή εντόμων, τρωκτικών με πιστοποιημένα προϊόντα.</p>
+        <p>Ασφαλής και αποτελεσματική απαλλαγή εντόμων, τρωκτικών και κάθε είδους παρασίτων με πιστοποιημένα προϊόντα.</p>
         <ul class="svc-list">
           <li>Ψεκασμός κοινόχρηστων χώρων πολυκατοικιών και διαμερισμάτων</li>
           <li>Ράντισμα κήπων και φυτών για κουνούπια</li>
@@ -136,7 +137,7 @@
   </div>
 </section>
 
-<!-- Feature / Mascot Standing -->
+<!-- Feature -->
 <section class="feature">
   <div class="feature-inner">
     <div class="feature-text rv2">
@@ -192,7 +193,7 @@
             <div class="wp-n">04</div>
             <div>
               <h4>Επείγουσα Διαθεσιμότητα</h4>
-              <p>Άμεση ανταπόκριση καθ' όλο το 24ωρο για θέματα αποφάξεων - άντληση υδάτων κτλ.</p>
+              <p>Άμεση ανταπόκριση καθ' όλο το 24ωρο για θέματα αποφράξεων - άντληση υδάτων κτλ.</p>
             </div>
           </div>
         </div>
@@ -277,6 +278,43 @@
   </div>
 </section>
 
+<!-- Facilities Carousel -->
+<section class="gallery" id="facilities">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Υποδομές &amp; Εξοπλισμός</div>
+      <h2 class="sec-title">Οι Εγκαταστάσεις<br>&amp; Ο Στόλος Μας</h2>
+      <p class="sec-sub" style="margin-top:14px;">Σύγχρονα εξειδικευμένα οχήματα και ιδιόκτητες εγκαταστάσεις έτοιμες να ανταποκριθούν 24/7 σε κάθε ανάγκη.</p>
+    </div>
+
+    <div class="carousel-wrap rv">
+      <div class="carousel-track" id="carTrack">
+        <div class="carousel-slide">
+          <img src="assets/image1.png" alt="Εγκαταστάσεις ΠΝ Service Κτιρίων 1">
+          <div class="carousel-caption">Κεντρικές Εγκαταστάσεις &amp; Εξοπλισμός</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/image2.png" alt="Στόλος Οχημάτων ΠΝ Service Κτιρίων" onerror="this.src='assets/image1.png'">
+          <div class="carousel-caption">Εξειδικευμένα Αποφρακτικά Οχήματα</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/image3.png" alt="Αποθήκη Υλικών Απεντόμωσης" onerror="this.src='assets/image1.png'">
+          <div class="carousel-caption">Πιστοποιημένα Υλικά &amp; Μηχανήματα</div>
+        </div>
+      </div>
+
+      <button class="car-btn car-prev" onclick="moveSlide(-1)" aria-label="Προηγούμενη εικόνα">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="car-btn car-next" onclick="moveSlide(1)" aria-label="Επόμενη εικόνα">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <div class="car-dots" id="carDots"></div>
+    </div>
+  </div>
+</section>
+
 <!-- Contact -->
 <section class="contact" id="contact">
   <div class="wrap">
@@ -328,7 +366,7 @@
         </div>
       </div>
       <div class="contact-vis rv">
-<div class="call-box">
+        <div class="call-box">
           <p>Καλέστε μας τώρα</p>
           <div class="phones">
             <a href="tel:+306976787977">6976 787 977</a>
@@ -340,48 +378,6 @@
           </a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Facilities Carousel -->
-<section class="gallery" id="facilities">
-  <div class="wrap">
-    <div class="rv">
-      <div class="eyebrow">Υποδομές &amp; Εξοπλισμός</div>
-      <h2 class="sec-title">Οι Εγκαταστάσεις<br>&amp; Ο Στόλος Μας</h2>
-      <p class="sec-sub" style="margin-top:14px;">Σύγχρονα εξειδικευμένα οχήματα και ιδιόκτητες εγκαταστάσεις έτοιμες να ανταποκριθούν 24/7 σε κάθε ανάγκη.</p>
-    </div>
-
-    <div class="carousel-wrap rv">
-      <div class="carousel-track" id="carTrack">
-        <!-- Διαφάνεια 1 (Η δοκιμαστική σου εικόνα) -->
-        <div class="carousel-slide">
-          <img src="assets/image1.png" alt="Εγκαταστάσεις ΠΝ Service Κτιρίων 1">
-          <div class="carousel-caption">Κεντρικές Εγκαταστάσεις &amp; Εξοπλισμός</div>
-        </div>
-        <!-- Διαφάνεια 2 (Για δοκιμή εναλλαγής - αντικατάστησε με δική σου) -->
-        <div class="carousel-slide">
-          <img src="assets/image2.png" alt="Στόλος Οχημάτων ΠΝ Service Κτιρίων" onerror="this.src='assets/image1.png'">
-          <div class="carousel-caption">Εξειδικευμένα Αποφρακτικά Οχήματα</div>
-        </div>
-        <!-- Διαφάνεια 3 (Για δοκιμή εναλλαγής - αντικατάστησε με δική σου) -->
-        <div class="carousel-slide">
-          <img src="assets/image3.png" alt="Αποθήκη Υλικών Απεντόμωσης" onerror="this.src='assets/image1.png'">
-          <div class="carousel-caption">Πιστοποιημένα Υλικά &amp; Μηχανήματα</div>
-        </div>
-      </div>
-
-      <!-- Κουμπιά Πλοήγησης -->
-      <button class="car-btn car-prev" onclick="moveSlide(-1)" aria-label="Προηγούμενη εικόνα">
-        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="car-btn car-next" onclick="moveSlide(1)" aria-label="Επόμενη εικόνα">
-        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-
-      <!-- Κουκκίδες (Dots) -->
-      <div class="car-dots" id="carDots"></div>
     </div>
   </div>
 </section>
@@ -413,6 +409,7 @@
           <li><a href="#why">Σχετικά</a></li>
           <li><a href="#testimonials">Κριτικές</a></li>
           <li><a href="#how">Πώς Λειτουργεί</a></li>
+          <li><a href="#facilities">Εγκαταστάσεις</a></li>
           <li><a href="#contact">Επικοινωνία</a></li>
         </ul>
       </div>
@@ -441,11 +438,11 @@
 </a>
 
 <script>
+// Scroll Reveal
 var obs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});
 },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rv,.rv2').forEach(function(el){obs.observe(el);});
-
 
 // Carousel Logic
 let currentSlide = 0;
@@ -454,7 +451,6 @@ const slides = document.querySelectorAll('.carousel-slide');
 const dotsContainer = document.getElementById('carDots');
 
 if (track && slides.length > 0) {
-  // Δημιουργία κουκκίδων ανάλογα με τον αριθμό των εικόνων
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.className = 'car-dot' + (i === 0 ? ' active' : '');
@@ -480,10 +476,8 @@ if (track && slides.length > 0) {
     updateCarousel();
   };
 
-  // Αυτόματη εναλλαγή κάθε 5 δευτερόλεπτα
   setInterval(() => moveSlide(1), 5000);
 }
-
 </script>
 </body>
 </html>
