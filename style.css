@@ -563,3 +563,101 @@ header{background:linear-gradient(90deg,#060814 0%,#0b0c1a 58%,#101a3b 100%);box
 .foot-brand img{height:72px;max-width:280px;object-fit:contain;}
 @media(max-width:1080px){.hlogo{min-width:190px;}.hlogo img{height:54px;max-width:190px;}.hero-right{display:none;}}
 @media(max-width:720px){.hlogo{min-width:auto;}.hlogo img{height:46px;max-width:150px;}}
+
+
+/* ─── FACILITIES CAROUSEL ─── */
+.gallery{
+  background:var(--ink);
+  color:#fff;
+  position:relative;
+}
+.gallery .eyebrow{color:rgba(255,255,255,.5);}
+.gallery .eyebrow::after{background:var(--blue2);}
+.gallery .sec-title{color:#fff;}
+.gallery .sec-sub{color:rgba(255,255,255,.6);}
+
+.carousel-wrap{
+  position:relative;
+  margin-top:48px;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.14);
+  background:#060814;
+  box-shadow:0 28px 80px rgba(0,0,0,.45);
+}
+.carousel-track{
+  display:flex;
+  transition:transform .55s cubic-bezier(.25,.8,.25,1);
+}
+.carousel-slide{
+  min-width:100%;
+  position:relative;
+  aspect-ratio:16/9;
+  max-height:580px;
+}
+.carousel-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.carousel-caption{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  padding:48px 36px 28px;
+  background:linear-gradient(to top,rgba(6,8,20,.92) 0%,rgba(6,8,20,.5) 60%,transparent 100%);
+  font-family:'Oswald',sans-serif;
+  font-size:20px;
+  font-weight:500;
+  letter-spacing:.8px;
+  color:#fff;
+}
+.car-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:48px;height:48px;
+  border-radius:50%;
+  background:rgba(11,12,26,.75);
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  transition:background .2s,border-color .2s,transform .2s;
+  z-index:2;
+  backdrop-filter:blur(6px);
+}
+.car-btn:hover{
+  background:var(--blue2);
+  border-color:var(--blue2);
+  transform:translateY(-50%) scale(1.06);
+}
+.car-btn svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.2;}
+.car-prev{left:20px;}
+.car-next{right:20px;}
+
+.car-dots{
+  position:absolute;
+  bottom:24px;right:32px;
+  display:flex;gap:8px;
+  z-index:2;
+}
+.car-dot{
+  width:10px;height:10px;
+  border-radius:999px;
+  border:none;
+  background:rgba(255,255,255,.35);
+  cursor:pointer;
+  transition:width .3s,background .3s;
+}
+.car-dot.active{
+  width:28px;
+  background:var(--blue2);
+}
+
+@media(max-width:720px){
+  .carousel-slide{aspect-ratio:4/3;}
+  .carousel-caption{font-size:16px;padding:36px 20px 44px;}
+  .car-btn{width:40px;height:40px;}
+  .car-prev{left:12px;}.car-next{right:12px;}
+  .car-dots{right:auto;left:20px;bottom:16px;}
+}
