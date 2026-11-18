@@ -1,489 +1,663 @@
-<!DOCTYPE html>
-<html lang="el">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ΠΝ Service Κτιρίων – Παπαθανασίου Νικόλαος. Αποφράξεις, Απολυμάνσεις, Κοινόχρηστα. 24/7 εξυπηρέτηση Αθήνα.">
-<title>ΠΝ Service Κτιρίων | Παπαθανασίου Νικόλαος</title>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="apple-touch-icon" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3',sans-serif;color:#1c1c2e;background:#fff;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
 
-</head>
-<body>
-
-<!-- Header -->
-<header id="hdr">
-  <a href="#" class="hlogo">
-    <img src="assets/logo-header-white.png" alt="ΠΝ Service Κτιρίων" loading="eager">
-  </a>
-  <ul class="hnav">
-    <li><a href="#services">Υπηρεσίες</a></li>
-    <li><a href="#why">Γιατί Εμάς</a></li>
-    <li><a href="#how">Πώς Λειτουργεί</a></li>
-    <li><a href="#contact">Επικοινωνία</a></li>
-  </ul>
-  <a href="tel:+306976787977" class="hcall">
-    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
-    Επείγον Κλήση
-  </a>
-  <button class="hmenu" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Μενού">
-    <span></span><span></span><span></span>
-  </button>
-</header>
-<nav class="mob" id="mob">
-  <a href="#services" onclick="this.closest('.mob').classList.remove('open')">Υπηρεσίες</a>
-  <a href="#why" onclick="this.closest('.mob').classList.remove('open')">Γιατί Εμάς</a>
-  <a href="#how" onclick="this.closest('.mob').classList.remove('open')">Πώς Λειτουργεί</a>
-  <a href="#contact" onclick="this.closest('.mob').classList.remove('open')">Επικοινωνία</a>
-</nav>
-
-<!-- Hero -->
-<section class="hero" id="top">
-  <div class="hero-lines"></div>
-  <div class="hero-accent"></div>
-  <div class="hero-left">
-    <div class="hero-tag">Πιστοποιημένοι · Ασφαλισμένοι · 30+ Χρόνια</div>
-    <h1>
-      <span>Service Κτιρίων</span>
-      Παπαθανασίου<br>Νικόλαος
-    </h1>
-    <div class="hero-divider"></div>
-    <p class="hero-desc">Με περισσότερα από 30 χρόνια δυναμικής παρουσίας στον χώρο, προσφέρουμε ολοκληρωμένες λύσεις για κάθε ανάγκη του κτιρίου σας. Εμπιστευτείτε τους πιστοποιημένους επαγγελματίες που γνωρίζουν το κτίριό σας καλύτερα από τον καθένα.</p>
-    <div class="hero-btns">
-      <a href="tel:+306976787977" class="btn-red">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
-        Καλέστε Μας Τώρα
-      </a>
-      <a href="#services" class="btn-ghost">Οι Υπηρεσίες Μας</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat"><div class="n">30+</div><div class="l">Χρόνια Εμπειρίας</div></div>
-      <div class="hstat"><div class="n">24/7</div><div class="l">Επείγουσα Ανταπόκριση</div></div>
-      <div class="hstat"><div class="n">4+</div><div class="l">Εξειδικευμένα Οχήματα</div></div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-right-bg"></div>
-    <div class="hero-logo-showcase rv2" aria-hidden="true">
-      <img src="assets/logo-full-white.png" alt="ΠΝ Service Κτιρίων - Παπαθανασίου Νικόλαος">
-    </div>
-  </div>
-</section>
-
-<!-- Ribbon -->
-<div class="ribbon" aria-hidden="true">
-  <div class="ribbon-track">
-    <div class="ribbon-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Αδειοδοτημένοι &amp; Ασφαλισμένοι</div>
-    <div class="ribbon-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Επείγουσα Εξυπηρέτηση 24/7</div>
-    <div class="ribbon-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Εξυπηρετούμε όλη την Αθήνα</div>
-    <div class="ribbon-item"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Πιστοποιημένα Υλικά</div>
-    <div class="ribbon-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Αδειοδοτημένοι &amp; Ασφαλισμένοι</div>
-    <div class="ribbon-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Επείγουσα Εξυπηρέτηση 24/7</div>
-    <div class="ribbon-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Εξυπηρετούμε όλη την Αθήνα</div>
-    <div class="ribbon-item"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Πιστοποιημένα Υλικά</div>
-  </div>
-</div>
-
-<!-- Services -->
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="svc-head rv">
-      <div>
-        <div class="eyebrow">Τι Κάνουμε</div>
-        <h2 class="sec-title">Οι Κύριες<br>Υπηρεσίες Μας</h2>
-      </div>
-      <p class="sec-sub">Επαγγελματικές, πιστοποιημένες και πλήρως ασφαλισμένες υπηρεσίες για οικιστικά και εμπορικά ακίνητα στην Αθήνα.</p>
-    </div>
-    <div class="svc-grid rv">
-      <div class="svc-card">
-        <div class="svc-num">01</div>
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <h3>Απόφραξη &amp;<br>Καθαρισμός Αποχετεύσεων</h3>
-        <p>Επαγγελματικός Καθαρισμός κεντρικού δικτύου αποχέτευσης, καθώς και μηνιαία συντήρηση κεντρικών φρεατίων κατόπιν συνεννόησης.</p>
-        <ul class="svc-list">
-          <li>Καθαρισμός φρεατίων με πιεστικό μηχάνημα και ατσαλίνα διαφόρων μεγεθών για κεντρικά φρεάτια και διαμερίσματα</li>
-          <li>Αντλήσεις Υδάτων</li>
-          <li>Διάγνωση με κάμερα</li>
-        </ul>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">02</div>
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <h3>Απεντόμωση &amp;<br>Μυοκτονία</h3>
-        <p>Ασφαλής και αποτελεσματική απαλλαγή εντόμων, τρωκτικών με πιστοποιημένα προϊόντα.</p>
-        <ul class="svc-list">
-          <li>Ψεκασμός κοινόχρηστων χώρων πολυκατοικιών και διαμερισμάτων</li>
-          <li>Ράντισμα κήπων και φυτών για κουνούπια</li>
-          <li>Τοποθέτηση φαρμάκων ή/και δολοματικών σταθμών, όπου απαιτείται, για εξόντωση τρωκτικών</li>
-        </ul>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">03</div>
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3>Διαχείριση Πολυκατοικιών &amp;<br>Έκδοση Κοινοχρήστων</h3>
-        <p>Άμεση Παράδοση. Πλήρης διαχείριση πολυκατοικίας με διαφάνεια και συνέπεια.</p>
-        <ul class="svc-list">
-          <li>Πλήρες ιστορικό αρχείου δαπανών και αποδείξεων</li>
-          <li>Συλλογή κοινοχρήστων</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Feature / Mascot Standing -->
-<section class="feature">
-  <div class="feature-inner">
-    <div class="feature-text rv2">
-      <div class="eyebrow">Γιατί Να Μας Επιλέξετε</div>
-      <h2 class="sec-title">Γιατί ξεχωρίζουμε;</h2>
-      <p>Συνδυάζουμε <strong>επαγγελματική πιστοποίηση</strong> με σύγχρονο εξοπλισμό και πραγματική υπευθυνότητα. Η εμπειρία τριών δεκαετιών μας επιτρέπει να διαχειριζόμαστε κάθε περιστατικό με τη δέουσα προσοχή.</p>
-      <p>Λειτουργούμε ως ο <strong>στρατηγικός συνεργάτης</strong> του κτιρίου σας, προσφέροντας ένα ευρύ φάσμα υπηρεσιών που απλοποιεί την καθημερινότητα των ενοίκων.</p>
-      <a href="tel:+306976787977" class="feature-cta">
-        Επικοινωνήστε Μαζί Μας
-        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-    <div class="feature-img feature-graphic" aria-hidden="true">
-      <div class="fg-card">
-        <span>24/7</span>
-        <strong>Άμεση Εξυπηρέτηση</strong>
-        <em>Αθήνα</em>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Why Us -->
-<section class="why" id="why">
-  <div class="wrap">
-    <div class="why-layout">
-      <div>
-        <div class="eyebrow rv">Τα Πλεονεκτήματά Μας</div>
-        <h2 class="sec-title rv">Δουλεύουμε<br>διαφορετικά</h2>
-        <div class="why-points">
-          <div class="wp rv">
-            <div class="wp-n">01</div>
-            <div>
-              <h4>Μόνο Πιστοποιημένοι Επαγγελματίες</h4>
-              <p>Κάθε τεχνικός είναι αδειοδοτημένος και άρτια εκπαιδευμένος.</p>
-            </div>
-          </div>
-          <div class="wp rv">
-            <div class="wp-n">02</div>
-            <div>
-              <h4>Ποιότητα Εργασίας</h4>
-              <p>Η εμπειρία των τριών (3) δεκαετιών μας επιτρέπει να διαχειριζόμαστε κάθε περιστατικό με τη δέουσα προσοχή, σεβόμενοι τις υποδομές του χώρου σας.</p>
-            </div>
-          </div>
-          <div class="wp rv">
-            <div class="wp-n">03</div>
-            <div>
-              <h4>Ολιστική Προσέγγιση</h4>
-              <p>Λειτουργούμε ως ο στρατηγικός συνεργάτης του κτιρίου σας, προσφέροντας ένα ευρύ φάσμα υπηρεσιών που απλοποιεί την καθημερινότητα των ενοίκων.</p>
-            </div>
-          </div>
-          <div class="wp rv">
-            <div class="wp-n">04</div>
-            <div>
-              <h4>Επείγουσα Διαθεσιμότητα</h4>
-              <p>Άμεση ανταπόκριση καθ' όλο το 24ωρο για θέματα αποφάξεων - άντληση υδάτων κτλ.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="why-panel rv">
-          <div class="cert-items">
-            <div class="ci"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><p>Πιστοποιημένες<br>Διαδικασίες ISO</p></div>
-            <div class="ci"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><p>Πιστοποιημένα<br>Υλικά</p></div>
-            <div class="ci"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12c-1 4-4.5 7-9 7s-8-3-9-7 4.5-7 9-7 8 3 9 7z"/></svg><p>Εγκεκριμένοι από<br>Υπουργείο</p></div>
-            <div class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><p>Αυθημερόν<br>Διαθεσιμότητα</p></div>
-          </div>
-          <div class="quote-block">
-            <q>Μετατρέπουμε την πολυετή εμπειρία μας σε ολοκληρωμένη φροντίδα για το κτίριό σας, με συνέπεια και επαγγελματισμό.</q>
-            <cite>— Ν. Παπαθανασίου, Ιδρυτής</cite>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- How It Works -->
-<section class="how" id="how">
-  <div class="wrap">
-    <div class="how-title-row rv">
-      <div>
-        <div class="eyebrow">Η Διαδικασία</div>
-        <h2 class="sec-title">Πώς Λειτουργεί</h2>
-      </div>
-      <p class="sec-sub">Η επαγγελματική βοήθεια δεν ήταν ποτέ πιο απλή. Τέσσερα βήματα από την πρώτη επαφή έως την ολοκλήρωση.</p>
-    </div>
-    <div class="steps">
-      <div class="step rv">
-        <div class="step-n">1</div>
-        <h4>Επικοινωνήστε Μαζί Μας</h4>
-        <p>Μη διστάσετε, τηλεφωνήστε μας. Απαντάμε άμεσα.</p>
-      </div>
-      <div class="step rv">
-        <div class="step-n">2</div>
-        <h4>Αξιολόγηση</h4>
-        <p>Επισκεπτόμαστε το ακίνητό σας και αξιολογούμε την κατάσταση.</p>
-      </div>
-      <div class="step rv">
-        <div class="step-n">3</div>
-        <h4>Λήψη Προσφοράς</h4>
-        <p>Λαμβάνετε αναλυτική προσφορά πριν ξεκινήσει οποιαδήποτε εργασία.</p>
-      </div>
-      <div class="step rv">
-        <div class="step-n">4</div>
-        <h4>Ολοκλήρωση</h4>
-        <p>Πιστοποιημένοι τεχνικοί ολοκληρώνουν την εργασία με πλήρη τεκμηρίωση.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section class="testi" id="testimonials">
-  <div class="wrap">
-    <div class="rv">
-      <div class="eyebrow">Κριτικές Πελατών</div>
-      <h2 class="sec-title">Τι Λένε<br>οι Πελάτες Μας</h2>
-    </div>
-    <div class="testi-grid">
-      <div class="tc rv">
-        <div class="tc-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <q>Τους καλέσαμε για σοβαρό πρόβλημα με κατσαρίδες στο εστιατόριό μας. Ήρθαν την ίδια μέρα και διευθέτησαν το πρόβλημα.</q>
-        <div class="tc-author"><div class="tc-av">ΜΚ</div><div><div class="tc-name">Μιχάλης Κ.</div><div class="tc-role">Ιδιοκτήτης Εστιατορίου, Αθήνα</div></div></div>
-      </div>
-      <div class="tc rv">
-        <div class="tc-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <q>Διαχειρίζονται την πολυκατοικία μας και έχουν μεταμορφώσει τη λειτουργία της. Αξιόπιστοι και διαφανείς.</q>
-        <div class="tc-author"><div class="tc-av">ΕΒ</div><div><div class="tc-name">Ελένη Β.</div><div class="tc-role">Ιδιοκτήτρια Ακινήτου, Αθήνα</div></div></div>
-      </div>
-      <div class="tc rv">
-        <div class="tc-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <q>Βουλωμένη αποχέτευση στις 9 το βράδυ Κυριακή — ήρθαν την ίδια νύχτα. Εξαιρετική εξυπηρέτηση.</q>
-        <div class="tc-author"><div class="tc-av">ΓΠ</div><div><div class="tc-name">Γιώργος Π.</div><div class="tc-role">Ιδιοκτήτης Κατοικίας, Κηφισιά</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="rv" style="text-align:center;margin-bottom:56px;">
-      <div class="eyebrow" style="justify-content:center;">Επικοινωνήστε</div>
-      <h2 class="sec-title">Επικοινωνήστε Μαζί Μας</h2>
-      <p class="sec-sub" style="margin:14px auto 0;">Καλέστε ή στείλτε email απευθείας. Επείγον; Είμαστε διαθέσιμοι 24/7.</p>
-    </div>
-    <div class="contact-layout">
-      <div class="contact-cards rv">
-        <div class="cc">
-          <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg></div>
-          <div>
-            <div class="cc-label">Τηλέφωνο</div>
-            <div class="cc-val">
-              <a href="tel:+306976787977">6976 787977</a><br>
-              <a href="tel:+302106464820">210 6464820</a><br>
-              <a href="tel:+302106425888">210 6425888</a>
-            </div>
-          </div>
-        </div>
-        <div class="cc">
-          <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div>
-            <div class="cc-label">Email</div>
-            <div class="cc-val"><a href="mailto:pnkoinoxrista@gmail.com">pnkoinoxrista@gmail.com</a></div>
-          </div>
-        </div>
-        <div class="cc">
-          <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div>
-            <div class="cc-label">Έδρα</div>
-            <div class="cc-val">Γεωργαλά 4, Αθήνα</div>
-          </div>
-        </div>
-        <div class="cc">
-          <div class="cc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div>
-            <div class="cc-label">Ώρες Λειτουργίας</div>
-            <div class="cc-val">Δευ–Σαβ 08:00–16:00 | Επείγον 24/7</div>
-          </div>
-        </div>
-        <div class="cc">
-          <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div>
-            <div class="cc-label">Περιοχή Εξυπηρέτησης</div>
-            <div class="cc-val">Αθήνα</div>
-          </div>
-        </div>
-      </div>
-      <div class="contact-vis rv">
-<div class="call-box">
-          <p>Καλέστε μας τώρα</p>
-          <div class="phones">
-            <a href="tel:+306976787977">6976 787 977</a>
-            <a href="tel:+302106464820">210 646 4820</a>
-          </div>
-          <a href="tel:+306976787977" class="emerg">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
-            Επείγον; Καλέστε Τώρα
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Facilities Carousel -->
-<section class="gallery" id="facilities">
-  <div class="wrap">
-    <div class="rv">
-      <div class="eyebrow">Υποδομές &amp; Εξοπλισμός</div>
-      <h2 class="sec-title">Οι Εγκαταστάσεις<br>&amp; Ο Στόλος Μας</h2>
-      <p class="sec-sub" style="margin-top:14px;">Σύγχρονα εξειδικευμένα οχήματα και ιδιόκτητες εγκαταστάσεις έτοιμες να ανταποκριθούν 24/7 σε κάθε ανάγκη.</p>
-    </div>
-
-    <div class="carousel-wrap rv">
-      <div class="carousel-track" id="carTrack">
-        <!-- Διαφάνεια 1 (Η δοκιμαστική σου εικόνα) -->
-        <div class="carousel-slide">
-          <img src="assets/image1.png" alt="Εγκαταστάσεις ΠΝ Service Κτιρίων 1">
-          <div class="carousel-caption">Κεντρικές Εγκαταστάσεις &amp; Εξοπλισμός</div>
-        </div>
-        <!-- Διαφάνεια 2 (Για δοκιμή εναλλαγής - αντικατάστησε με δική σου) -->
-        <div class="carousel-slide">
-          <img src="assets/image2.png" alt="Στόλος Οχημάτων ΠΝ Service Κτιρίων" onerror="this.src='assets/image1.png'">
-          <div class="carousel-caption">Εξειδικευμένα Αποφρακτικά Οχήματα</div>
-        </div>
-        <!-- Διαφάνεια 3 (Για δοκιμή εναλλαγής - αντικατάστησε με δική σου) -->
-        <div class="carousel-slide">
-          <img src="assets/image3.png" alt="Αποθήκη Υλικών Απεντόμωσης" onerror="this.src='assets/image1.png'">
-          <div class="carousel-caption">Πιστοποιημένα Υλικά &amp; Μηχανήματα</div>
-        </div>
-      </div>
-
-      <!-- Κουμπιά Πλοήγησης -->
-      <button class="car-btn car-prev" onclick="moveSlide(-1)" aria-label="Προηγούμενη εικόνα">
-        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="car-btn car-next" onclick="moveSlide(1)" aria-label="Επόμενη εικόνα">
-        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-
-      <!-- Κουκκίδες (Dots) -->
-      <div class="car-dots" id="carDots"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="wrap">
-    <div class="foot-inner">
-      <div class="foot-brand">
-        <img src="assets/logo-full-white.png" alt="ΠΝ Service Κτιρίων - Παπαθανασίου Νικόλαος" loading="eager">
-        <p>Επαγγελματικές υπηρεσίες απεντόμωσης, διαχείρισης κτιρίων και καθαρισμού αποχετεύσεων.</p>
-        <div class="fsocials">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        </div>
-      </div>
-      <div class="fcol">
-        <h5>Υπηρεσίες</h5>
-        <ul class="flinks">
-          <li><a href="#services">Απεντόμωση</a></li>
-          <li><a href="#services">Διαχείριση Κτιρίων</a></li>
-          <li><a href="#services">Καθαρισμός Αποχετεύσεων</a></li>
-          <li><a href="#contact">Επείγουσα Υπηρεσία</a></li>
-        </ul>
-      </div>
-      <div class="fcol">
-        <h5>Εταιρεία</h5>
-        <ul class="flinks">
-          <li><a href="#why">Σχετικά</a></li>
-          <li><a href="#testimonials">Κριτικές</a></li>
-          <li><a href="#how">Πώς Λειτουργεί</a></li>
-          <li><a href="#contact">Επικοινωνία</a></li>
-        </ul>
-      </div>
-      <div class="fcol">
-        <h5>Επικοινωνία</h5>
-        <ul class="flinks">
-          <li><a href="tel:+306976787977">6976 787977</a></li>
-          <li><a href="tel:+302106464820">210 6464820</a></li>
-          <li><a href="tel:+302106425888">210 6425888</a></li>
-          <li><a href="mailto:pnkoinoxrista@gmail.com">pnkoinoxrista@gmail.com</a></li>
-          <li><a href="#contact">Γεωργαλά 4, Αθήνα</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 ΠΝ Service Κτιρίων. Όλα τα δικαιώματα διατηρούνται.</span>
-      <span>Αδειοδοτημένοι · Ασφαλισμένοι · Πιστοποιημένοι</span>
-    </div>
-  </div>
-</footer>
-
-<!-- Floating Call Button -->
-<a href="tel:+306976787977" class="floatcall" aria-label="Επείγον Κλήση">
-  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
-  <span>Επείγον; Καλέστε Τώρα</span>
-</a>
-
-<script>
-var obs=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});
-},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.rv,.rv2').forEach(function(el){obs.observe(el);});
-
-
-// Carousel Logic
-let currentSlide = 0;
-const track = document.getElementById('carTrack');
-const slides = document.querySelectorAll('.carousel-slide');
-const dotsContainer = document.getElementById('carDots');
-
-if (track && slides.length > 0) {
-  // Δημιουργία κουκκίδων ανάλογα με τον αριθμό των εικόνων
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = 'car-dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', 'Εικόνα ' + (i + 1));
-    dot.onclick = () => goToSlide(i);
-    dotsContainer.appendChild(dot);
-  });
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-    document.querySelectorAll('.car-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === currentSlide);
-    });
-  }
-
-  window.moveSlide = function(dir) {
-    currentSlide = (currentSlide + dir + slides.length) % slides.length;
-    updateCarousel();
-  };
-
-  window.goToSlide = function(index) {
-    currentSlide = index;
-    updateCarousel();
-  };
-
-  // Αυτόματη εναλλαγή κάθε 5 δευτερόλεπτα
-  setInterval(() => moveSlide(1), 5000);
+:root{
+  --ink:#0b0c1a;
+  --blue:#1535a8;
+  --blue2:#1e45d4;
+  --steel:#e8ecf8;
+  --mid:#4a5080;
+  --light:#f4f6ff;
+  --red:#d0202e;
+  --red2:#e83444;
+  --white:#fff;
+  --lh:1.7;
 }
 
-</script>
-</body>
-</html>
+/* ─── NAV ─── */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;height:76px;
+  border-bottom:3px solid var(--blue);
+}
+.hlogo img{height:62px;width:auto;transition:opacity .2s;}
+.hlogo:hover img{opacity:.85;}
+.hnav{display:flex;gap:36px;list-style:none;}
+.hnav a{
+  font-family:'Oswald',sans-serif;font-size:14px;font-weight:500;
+  color:rgba(255,255,255,.7);letter-spacing:1.2px;text-transform:uppercase;
+  transition:color .2s;padding-bottom:2px;
+  border-bottom:2px solid transparent;
+}
+.hnav a:hover{color:#fff;border-bottom-color:var(--blue2);}
+.hcall{
+  background:var(--red);color:#fff;
+  font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;
+  letter-spacing:1px;text-transform:uppercase;
+  padding:0 28px;height:44px;border-radius:3px;
+  display:flex;align-items:center;gap:8px;
+  transition:background .2s,transform .2s;
+  white-space:nowrap;
+}
+.hcall:hover{background:var(--red2);transform:translateY(-1px);}
+.hcall svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.5;flex-shrink:0;}
+.hmenu{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px;}
+.hmenu span{display:block;width:26px;height:2px;background:#fff;border-radius:1px;}
+.mob{
+  display:none;position:fixed;top:76px;left:0;right:0;
+  background:var(--ink);border-top:1px solid rgba(255,255,255,.1);
+  flex-direction:column;z-index:899;padding:24px 32px;gap:20px;
+}
+.mob.open{display:flex;}
+.mob a{font-family:'Oswald',sans-serif;font-size:16px;letter-spacing:1px;color:rgba(255,255,255,.8);text-transform:uppercase;}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;
+  background:var(--ink);
+  display:grid;grid-template-columns:1fr 1fr;
+  padding-top:76px;
+  overflow:hidden;position:relative;
+}
+.hero-lines{
+  position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,.015) 0px,
+    rgba(255,255,255,.015) 1px,
+    transparent 1px,
+    transparent 80px
+  );
+}
+.hero-accent{
+  position:absolute;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(21,53,168,.45) 0%,transparent 70%);
+  top:-100px;left:-100px;pointer-events:none;
+}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 60px 80px 80px;position:relative;z-index:1;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Oswald',sans-serif;font-size:11px;font-weight:500;
+  letter-spacing:3px;text-transform:uppercase;
+  color:rgba(255,255,255,.5);margin-bottom:32px;
+}
+.hero-tag::before{content:'';display:block;width:32px;height:1px;background:var(--blue2);}
+.hero h1{
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(42px,5.5vw,72px);font-weight:700;
+  color:#fff;line-height:1.0;letter-spacing:-.5px;
+  margin-bottom:12px;
+}
+.hero h1 span{
+  display:block;color:transparent;
+  -webkit-text-stroke:1.5px rgba(255,255,255,.25);
+  font-size:.75em;letter-spacing:2px;font-weight:400;
+}
+.hero-divider{width:56px;height:4px;background:var(--blue2);margin:28px 0;}
+.hero-desc{
+  font-size:16px;color:rgba(255,255,255,.6);
+  line-height:var(--lh);max-width:440px;margin-bottom:44px;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-red{
+  background:var(--red);color:#fff;
+  font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;
+  letter-spacing:1px;text-transform:uppercase;
+  padding:0 32px;height:52px;border-radius:3px;
+  display:inline-flex;align-items:center;gap:10px;
+  transition:background .2s,transform .2s;
+  box-shadow:0 6px 24px rgba(208,32,46,.4);
+}
+.btn-red:hover{background:var(--red2);transform:translateY(-2px);}
+.btn-red svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.5;}
+.btn-ghost{
+  border:1.5px solid rgba(255,255,255,.25);color:#fff;
+  font-family:'Oswald',sans-serif;font-size:14px;font-weight:500;
+  letter-spacing:1px;text-transform:uppercase;
+  padding:0 28px;height:52px;border-radius:3px;
+  display:inline-flex;align-items:center;
+  transition:border-color .2s,background .2s;
+}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06);}
+.hero-stats{
+  display:flex;gap:0;margin-top:56px;
+  border-top:1px solid rgba(255,255,255,.1);padding-top:32px;
+}
+.hstat{flex:1;padding-right:32px;}
+.hstat:not(:last-child){border-right:1px solid rgba(255,255,255,.1);margin-right:32px;}
+.hstat .n{font-family:'Oswald',sans-serif;font-size:36px;font-weight:700;color:var(--blue2);line-height:1;}
+.hstat .l{font-size:12px;color:rgba(255,255,255,.45);margin-top:5px;letter-spacing:.5px;}
+.hero-right{
+  position:relative;display:flex;align-items:flex-end;justify-content:center;
+  overflow:hidden;
+}
+.hero-right-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(21,53,168,.12) 0%,rgba(30,69,212,.05) 100%);
+}
+.hero-mascot{
+  position:relative;z-index:1;
+  width:90%;max-width:560px;
+  align-self:flex-end;
+  filter:drop-shadow(0 -20px 60px rgba(21,53,168,.3));
+  animation:levitate 5s ease-in-out infinite;
+}
+@keyframes levitate{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+
+/* ─── RIBBON ─── */
+.ribbon{
+  background:var(--blue);padding:14px 0;
+  overflow:hidden;white-space:nowrap;
+}
+.ribbon-track{
+  display:inline-flex;gap:0;
+  animation:ticker 22s linear infinite;
+}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ribbon-item{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:'Oswald',sans-serif;font-size:13px;font-weight:500;
+  letter-spacing:1.5px;text-transform:uppercase;
+  color:rgba(255,255,255,.9);
+  padding:0 40px;
+  border-right:1px solid rgba(255,255,255,.2);
+}
+.ribbon-item svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;flex-shrink:0;}
+
+/* ─── SHARED SECTION ─── */
+section{padding:100px 0;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 48px;}
+.eyebrow{
+  font-family:'Oswald',sans-serif;font-size:11px;font-weight:500;
+  letter-spacing:3px;text-transform:uppercase;color:var(--blue2);
+  display:flex;align-items:center;gap:12px;margin-bottom:18px;
+}
+.eyebrow::after{content:'';flex:0 0 40px;height:2px;background:var(--blue2);}
+.sec-title{
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(30px,3.5vw,48px);font-weight:700;
+  color:var(--ink);line-height:1.05;letter-spacing:-.3px;
+}
+.sec-sub{font-size:16px;color:var(--mid);line-height:var(--lh);max-width:560px;}
+
+/* ─── SERVICES ─── */
+.services{background:var(--light);}
+.svc-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:40px;margin-bottom:64px;flex-wrap:wrap;
+}
+.svc-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+  background:var(--steel);border:2px solid var(--steel);border-radius:4px;overflow:hidden;
+}
+.svc-card{
+  background:#fff;padding:44px 36px;
+  transition:background .25s;cursor:default;
+  position:relative;overflow:hidden;
+}
+.svc-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:4px;background:var(--blue);
+  transform:scaleY(0);transform-origin:bottom;
+  transition:transform .3s ease;
+}
+.svc-card:hover{background:var(--light);}
+.svc-card:hover::before{transform:scaleY(1);}
+.svc-num{
+  font-family:'Oswald',sans-serif;font-size:64px;font-weight:700;
+  color:var(--steel);line-height:1;margin-bottom:20px;
+  transition:color .25s;
+}
+.svc-card:hover .svc-num{color:rgba(21,53,168,.12);}
+.svc-icon{
+  width:52px;height:52px;border-radius:12px;
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:22px;
+}
+.svc-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.7;}
+.svc-card h3{
+  font-family:'Oswald',sans-serif;font-size:20px;font-weight:600;
+  color:var(--ink);margin-bottom:14px;line-height:1.2;letter-spacing:.2px;
+}
+.svc-card p{font-size:14px;color:var(--mid);line-height:var(--lh);margin-bottom:24px;}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.svc-list li{
+  font-size:13px;color:#333;display:flex;align-items:flex-start;gap:10px;
+  padding-left:0;line-height:1.5;
+}
+.svc-list li::before{
+  content:'';width:5px;height:5px;border-radius:50%;
+  background:var(--blue);flex-shrink:0;margin-top:6px;
+}
+
+/* ─── MASCOT FEATURE ─── */
+.feature{
+  background:var(--ink);padding:0;overflow:hidden;
+}
+.feature-inner{
+  display:grid;grid-template-columns:1fr 520px;
+  min-height:520px;max-width:1240px;margin:0 auto;
+}
+.feature-text{
+  padding:80px 64px 80px 48px;display:flex;flex-direction:column;justify-content:center;
+}
+.feature-text .eyebrow::after{background:rgba(255,255,255,.3);}
+.feature-text .eyebrow{color:rgba(255,255,255,.5);}
+.feature-text .sec-title{color:#fff;margin-bottom:20px;}
+.feature-text p{font-size:16px;color:rgba(255,255,255,.6);line-height:var(--lh);margin-bottom:16px;}
+.feature-text p strong{color:#fff;font-weight:600;}
+.feature-cta{
+  margin-top:32px;
+  display:inline-flex;align-items:center;gap:10px;
+  color:#fff;font-family:'Oswald',sans-serif;font-size:14px;
+  font-weight:500;letter-spacing:1.2px;text-transform:uppercase;
+  border-bottom:2px solid var(--blue2);padding-bottom:4px;width:fit-content;
+  transition:color .2s,border-color .2s;
+}
+.feature-cta:hover{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.3);}
+.feature-cta svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;}
+.feature-img{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,rgba(21,53,168,.15),transparent);
+  display:flex;align-items:flex-end;justify-content:center;
+}
+.feature-img img{
+  max-height:520px;width:auto;align-self:flex-end;
+  filter:drop-shadow(-20px 0 50px rgba(0,0,0,.5));
+}
+
+/* ─── WHY ─── */
+.why{background:#fff;}
+.why-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.why-points{display:flex;flex-direction:column;gap:0;margin-top:48px;}
+.wp{
+  display:flex;gap:24px;padding:28px 0;
+  border-bottom:1px solid var(--steel);
+}
+.wp:first-child{border-top:1px solid var(--steel);}
+.wp-n{
+  font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;
+  color:var(--blue);letter-spacing:1px;min-width:32px;padding-top:3px;
+}
+.wp h4{font-family:'Oswald',sans-serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:8px;}
+.wp p{font-size:14px;color:var(--mid);line-height:1.65;}
+.why-panel{
+  background:var(--ink);border-radius:4px;padding:48px 44px;
+  margin-top:48px;position:relative;overflow:hidden;
+}
+.why-panel::before{
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:220px;height:220px;border-radius:50%;
+  background:rgba(30,69,212,.15);
+}
+.cert-items{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.ci{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:4px;padding:20px 16px;text-align:center;
+  transition:background .2s;
+}
+.ci:hover{background:rgba(255,255,255,.1);}
+.ci svg{width:28px;height:28px;stroke:rgba(255,255,255,.6);fill:none;stroke-width:1.5;margin:0 auto 10px;display:block;}
+.ci p{font-size:12px;color:rgba(255,255,255,.65);font-family:'Oswald',sans-serif;letter-spacing:.5px;line-height:1.4;}
+.quote-block{
+  margin-top:24px;padding:24px;
+  border-left:3px solid var(--blue2);
+  background:rgba(255,255,255,.04);border-radius:0 4px 4px 0;
+}
+.quote-block q{
+  display:block;font-size:15px;font-style:italic;
+  color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:10px;
+}
+.quote-block cite{font-size:12px;color:rgba(255,255,255,.4);font-style:normal;font-family:'Oswald',sans-serif;letter-spacing:.5px;}
+
+/* ─── HOW ─── */
+.how{background:var(--light);}
+.how-title-row{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:64px;flex-wrap:wrap;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+.steps::after{
+  content:'';position:absolute;
+  top:36px;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,var(--blue),var(--steel));z-index:0;
+}
+.step{position:relative;z-index:1;padding:0 24px;text-align:center;}
+.step-n{
+  width:72px;height:72px;border-radius:50%;
+  background:var(--ink);color:#fff;
+  font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 28px;
+  border:3px solid var(--white);
+  box-shadow:0 0 0 2px var(--blue);
+}
+.step h4{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:10px;letter-spacing:.3px;}
+.step p{font-size:13px;color:var(--mid);line-height:1.65;}
+
+/* ─── TESTIMONIALS ─── */
+.testi{background:#fff;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;}
+.tc{
+  border:1.5px solid var(--steel);border-radius:4px;padding:36px;
+  transition:border-color .25s,box-shadow .25s;
+}
+.tc:hover{border-color:var(--blue);box-shadow:0 8px 40px rgba(21,53,168,.08);}
+.tc-stars{display:flex;gap:3px;margin-bottom:20px;}
+.tc-stars svg{width:16px;height:16px;fill:#f59e0b;stroke:none;}
+.tc q{
+  display:block;font-size:15px;color:#444;font-style:italic;
+  line-height:1.8;margin-bottom:24px;
+}
+.tc-author{display:flex;align-items:center;gap:14px;border-top:1px solid var(--steel);padding-top:20px;}
+.tc-av{
+  width:42px;height:42px;border-radius:50%;flex-shrink:0;
+  background:var(--ink);
+  font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+}
+.tc-name{font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;color:var(--ink);}
+.tc-role{font-size:12px;color:var(--mid);margin-top:2px;}
+
+/* ─── CONTACT ─── */
+.contact{background:var(--light);}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.contact-cards{display:flex;flex-direction:column;gap:16px;}
+.cc{
+  background:#fff;border-radius:4px;padding:24px 28px;
+  display:flex;align-items:flex-start;gap:18px;
+  border:1.5px solid var(--steel);
+  transition:border-color .25s,box-shadow .25s;
+}
+.cc:hover{border-color:var(--blue);box-shadow:0 4px 20px rgba(21,53,168,.08);}
+.cc-icon{
+  width:46px;height:46px;border-radius:3px;flex-shrink:0;
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+}
+.cc-icon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;}
+.cc-label{
+  font-family:'Oswald',sans-serif;font-size:10px;font-weight:500;
+  letter-spacing:1.5px;text-transform:uppercase;color:var(--mid);margin-bottom:5px;
+}
+.cc-val{font-size:15px;color:var(--ink);font-weight:600;}
+.cc-val a{color:var(--ink);transition:color .2s;}
+.cc-val a:hover{color:var(--blue);}
+.contact-vis{display:flex;flex-direction:column;align-items:center;gap:32px;}
+.contact-vis img{
+  max-width:380px;width:100%;
+  filter:drop-shadow(0 12px 40px rgba(21,53,168,.15));
+}
+.call-box{
+  width:100%;background:var(--ink);border-radius:4px;padding:36px 32px;text-align:center;
+}
+.call-box p{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;}
+.call-box .phones{display:flex;flex-direction:column;gap:8px;}
+.call-box a{
+  font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:#fff;
+  display:block;transition:color .2s;
+}
+.call-box a:hover{color:var(--blue2);}
+.call-box .emerg{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:22px;background:var(--red);color:#fff;
+  font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  padding:12px 28px;border-radius:3px;transition:background .2s;
+}
+.call-box .emerg:hover{background:var(--red2);}
+.call-box .emerg svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.5;}
+
+/* ─── FOOTER ─── */
+footer{background:var(--ink);padding:64px 0 32px;color:rgba(255,255,255,.55);}
+.foot-inner{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.foot-brand img{height:56px;width:auto;margin-bottom:18px;}
+.foot-brand p{font-size:14px;line-height:1.75;margin-bottom:22px;}
+.fsocials{display:flex;gap:10px;}
+.fsocials a{
+  width:36px;height:36px;border-radius:3px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s;
+}
+.fsocials a:hover{background:rgba(255,255,255,.15);}
+.fsocials svg{width:16px;height:16px;stroke:rgba(255,255,255,.65);fill:none;stroke-width:1.8;}
+.fcol h5{
+  font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;
+  color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;
+}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.flinks li a{font-size:14px;color:rgba(255,255,255,.5);transition:color .2s;}
+.flinks li a:hover{color:#fff;}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.08);padding-top:24px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.5px;
+  color:rgba(255,255,255,.3);
+}
+
+/* ─── FLOATING CALL ─── */
+.floatcall{
+  position:fixed;bottom:28px;right:28px;z-index:999;
+  background:var(--red);color:#fff;border-radius:50px;
+  padding:14px 28px;display:flex;align-items:center;gap:10px;
+  font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  box-shadow:0 8px 32px rgba(208,32,46,.5);
+  transition:transform .2s,box-shadow .2s;
+}
+.floatcall:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(208,32,46,.6);}
+.floatcall svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:2.5;}
+@keyframes fcpulse{0%,100%{box-shadow:0 8px 32px rgba(208,32,46,.5)}50%{box-shadow:0 8px 32px rgba(208,32,46,.5),0 0 0 10px rgba(208,32,46,.08)}}
+.floatcall{animation:fcpulse 2.8s ease-in-out infinite;}
+.floatcall:hover{animation:none;}
+
+/* ─── REVEAL ─── */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .65s ease,transform .65s ease;}
+.rv.in{opacity:1;transform:none;}
+.rv2{opacity:0;transform:translateX(-28px);transition:opacity .65s .1s ease,transform .65s .1s ease;}
+.rv2.in{opacity:1;transform:none;}
+
+
+/* ─── PROFESSIONAL LOGO / IMAGE-FREE VISUALS ─── */
+.hlogo{display:flex;align-items:center;min-width:230px;}
+.hlogo img{height:66px;max-width:245px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(255,255,255,.08));}
+header{background:linear-gradient(90deg,#060814 0%,#0b0c1a 58%,#101a3b 100%);box-shadow:0 8px 28px rgba(0,0,0,.18);}
+.hero{background:radial-gradient(circle at 15% 10%,rgba(30,69,212,.28),transparent 34%),linear-gradient(135deg,#060814 0%,#0b0c1a 55%,#111b40 100%);}
+.hero-panel{position:relative;z-index:1;width:min(78%,460px);padding:44px 42px;border:1px solid rgba(255,255,255,.16);border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.035));box-shadow:0 30px 80px rgba(0,0,0,.28);backdrop-filter:blur(8px);align-self:center;}
+.hero-panel::before{content:'';position:absolute;inset:14px;border:1px solid rgba(255,255,255,.08);border-radius:14px;pointer-events:none;}
+.hero-panel-logo{font-family:'Oswald',sans-serif;font-size:96px;line-height:.85;font-weight:700;color:#fff;letter-spacing:-4px;text-shadow:0 8px 30px rgba(30,69,212,.45);}
+.hero-panel-title{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:#fff;margin-top:18px;letter-spacing:1.5px;}
+.hero-panel-list{display:flex;flex-direction:column;gap:10px;margin-top:26px;}
+.hero-panel-list span{font-family:'Oswald',sans-serif;font-size:15px;letter-spacing:1px;color:rgba(255,255,255,.78);padding:10px 14px;border-left:3px solid var(--blue2);background:rgba(255,255,255,.055);border-radius:4px;}
+.feature-graphic{display:flex!important;align-items:center;justify-content:center;background:radial-gradient(circle at center,rgba(30,69,212,.22),transparent 62%);}
+.fg-card{width:330px;padding:42px 36px;border-radius:18px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.26);}
+.fg-card span{display:block;font-family:'Oswald',sans-serif;font-size:72px;font-weight:700;color:#fff;line-height:1;}
+.fg-card strong{display:block;font-family:'Oswald',sans-serif;font-size:22px;color:#fff;margin-top:16px;letter-spacing:.6px;}
+.fg-card em{display:block;font-style:normal;color:rgba(255,255,255,.55);margin-top:8px;}
+.svc-card,.tc,.cc,.call-box{border-radius:14px;}
+.btn-red,.btn-ghost,.hcall,.floatcall{border-radius:999px;}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1080px){
+  header{padding:0 28px;}
+  .hlogo{min-width:210px;}
+  .hlogo img{height:60px;max-width:220px;}
+  .wrap{padding:0 28px;}
+  .svc-grid{grid-template-columns:1fr 1fr;}
+  .feature-inner{grid-template-columns:1fr;}
+  .feature-img{display:none;}
+  .why-layout{grid-template-columns:1fr;gap:48px;}
+  .steps{grid-template-columns:1fr 1fr;gap:48px;}
+  .steps::after{display:none;}
+  .testi-grid{grid-template-columns:1fr 1fr;}
+  .contact-layout{grid-template-columns:1fr;}
+  .contact-vis{display:none;}
+  .foot-inner{grid-template-columns:1fr 1fr;}
+  .hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+}
+@media(max-width:720px){
+  header{padding:0 20px;height:66px;}
+  .hlogo{min-width:auto;}
+  .hlogo img{height:54px;max-width:175px;}
+  .hnav,.hcall{display:none;}
+  .hmenu{display:flex;}
+  .mob{top:66px;}
+  .wrap{padding:0 20px;}
+  .svc-grid{grid-template-columns:1fr;}
+  .hero-left{padding:60px 20px;}
+  .feature-text{padding:60px 20px;}
+  .testi-grid{grid-template-columns:1fr;}
+  .foot-inner{grid-template-columns:1fr;gap:32px;}
+  .steps{grid-template-columns:1fr;}
+  .floatcall span{display:none;}
+  .floatcall{padding:16px;border-radius:50%;}
+}
+
+/* ─── UPDATED LOGOS ─── */
+.hlogo{display:flex;align-items:center;min-width:210px;}
+.hlogo img{height:58px;max-width:210px;object-fit:contain;filter:drop-shadow(0 3px 12px rgba(255,255,255,.10));}
+.hero-right{align-items:center;justify-content:center;padding:60px 48px;}
+.hero-right-bg{
+  background:
+    radial-gradient(circle at 48% 34%,rgba(30,69,212,.22),transparent 42%),
+    radial-gradient(circle at 80% 75%,rgba(21,53,168,.16),transparent 38%),
+    linear-gradient(145deg,rgba(5,7,20,.96) 0%,rgba(9,12,32,.94) 48%,rgba(13,20,52,.92) 100%);
+}
+.hero-logo-showcase{
+  position:relative;z-index:1;width:min(88%,680px);
+  display:flex;align-items:center;justify-content:center;
+  padding:48px 46px;border-radius:28px;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 35%,rgba(30,69,212,.24),transparent 58%),
+    linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:
+    0 38px 110px rgba(0,0,0,.52),
+    0 0 70px rgba(30,69,212,.10),
+    inset 0 1px 0 rgba(255,255,255,.10),
+    inset 0 -1px 0 rgba(0,0,0,.35);
+  backdrop-filter:blur(10px);
+}
+.hero-logo-showcase::before{
+  content:'';position:absolute;inset:14px;border-radius:22px;
+  border:1px solid rgba(255,255,255,.075);pointer-events:none;
+}
+.hero-logo-showcase::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.08) 42%,transparent 70%);
+  opacity:.35;transform:translateX(-35%);
+}
+.hero-logo-showcase img{
+  position:relative;z-index:1;width:100%;height:auto;object-fit:contain;
+  filter:
+    drop-shadow(0 28px 70px rgba(0,0,0,.42))
+    drop-shadow(0 0 24px rgba(30,69,212,.20));
+}
+.foot-brand img{height:72px;max-width:280px;object-fit:contain;}
+@media(max-width:1080px){.hlogo{min-width:190px;}.hlogo img{height:54px;max-width:190px;}.hero-right{display:none;}}
+@media(max-width:720px){.hlogo{min-width:auto;}.hlogo img{height:46px;max-width:150px;}}
+
+
+/* ─── FACILITIES CAROUSEL ─── */
+.gallery{
+  background:var(--ink);
+  color:#fff;
+  position:relative;
+}
+.gallery .eyebrow{color:rgba(255,255,255,.5);}
+.gallery .eyebrow::after{background:var(--blue2);}
+.gallery .sec-title{color:#fff;}
+.gallery .sec-sub{color:rgba(255,255,255,.6);}
+
+.carousel-wrap{
+  position:relative;
+  margin-top:48px;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.14);
+  background:#060814;
+  box-shadow:0 28px 80px rgba(0,0,0,.45);
+}
+.carousel-track{
+  display:flex;
+  transition:transform .55s cubic-bezier(.25,.8,.25,1);
+}
+.carousel-slide{
+  min-width:100%;
+  position:relative;
+  aspect-ratio:16/9;
+  max-height:580px;
+}
+.carousel-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.carousel-caption{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  padding:48px 36px 28px;
+  background:linear-gradient(to top,rgba(6,8,20,.92) 0%,rgba(6,8,20,.5) 60%,transparent 100%);
+  font-family:'Oswald',sans-serif;
+  font-size:20px;
+  font-weight:500;
+  letter-spacing:.8px;
+  color:#fff;
+}
+.car-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:48px;height:48px;
+  border-radius:50%;
+  background:rgba(11,12,26,.75);
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  transition:background .2s,border-color .2s,transform .2s;
+  z-index:2;
+  backdrop-filter:blur(6px);
+}
+.car-btn:hover{
+  background:var(--blue2);
+  border-color:var(--blue2);
+  transform:translateY(-50%) scale(1.06);
+}
+.car-btn svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.2;}
+.car-prev{left:20px;}
+.car-next{right:20px;}
+
+.car-dots{
+  position:absolute;
+  bottom:24px;right:32px;
+  display:flex;gap:8px;
+  z-index:2;
+}
+.car-dot{
+  width:10px;height:10px;
+  border-radius:999px;
+  border:none;
+  background:rgba(255,255,255,.35);
+  cursor:pointer;
+  transition:width .3s,background .3s;
+}
+.car-dot.active{
+  width:28px;
+  background:var(--blue2);
+}
+
+@media(max-width:720px){
+  .carousel-slide{aspect-ratio:4/3;}
+  .carousel-caption{font-size:16px;padding:36px 20px 44px;}
+  .car-btn{width:40px;height:40px;}
+  .car-prev{left:12px;}.car-next{right:12px;}
+  .car-dots{right:auto;left:20px;bottom:16px;}
+}
