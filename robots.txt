@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: [https://pnservices.gr/sitemap.xml](https://pnservices.gr/sitemap.xml)
